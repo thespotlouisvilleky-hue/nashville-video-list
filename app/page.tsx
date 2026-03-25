@@ -172,12 +172,13 @@ function Parallax({
   className,
   speed = 0.03,
   as,
+  ...props
 }: {
   children: ReactNode;
   className?: string;
   speed?: number;
   as?: ElementType;
-}) {
+} & Record<string, unknown>) {
   const Tag = as || 'div';
   const ref = useRef<HTMLElement | null>(null);
   const [offset, setOffset] = useState(0);
@@ -225,7 +226,7 @@ function Parallax({
       };
 
   return (
-    <Tag ref={ref} className={className} style={style}>
+    <Tag ref={ref} className={className} style={style} {...props}>
       {children}
     </Tag>
   );
@@ -384,8 +385,8 @@ export default function Home() {
         </div>
       </section>
 
-      <Parallax as="section" id="featured" speed={0.01} className="border-t border-black/10 bg-[#EFE7DE]">
-        <div className="mx-auto max-w-6xl px-6 py-16 md:px-10">
+      <Parallax as="section" speed={0.01} className="border-t border-black/10 bg-[#EFE7DE]">
+        <div id="featured" className="mx-auto max-w-6xl px-6 py-16 md:px-10">
           <Reveal delay={30}>
             <p className="text-sm uppercase tracking-[0.18em] text-[#7a6d66]">Featured</p>
             <h2 className="mt-2 text-3xl font-semibold">Good places to start</h2>
