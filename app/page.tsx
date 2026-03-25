@@ -231,9 +231,25 @@ function Parallax({
   );
 }
 
-function ExternalLink({ href, children, className }: { href: string; children: ReactNode; className?: string }) {
+function ExternalLink({
+  href,
+  children,
+  className,
+  style,
+}: {
+  href: string;
+  children: ReactNode;
+  className?: string;
+  style?: CSSProperties;
+}) {
   return (
-    <a href={href} target="_blank" rel="noreferrer" className={className}>
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      className={className}
+      style={style}
+    >
       {children}
     </a>
   );
