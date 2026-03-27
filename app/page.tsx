@@ -29,12 +29,12 @@ type Tier = {
 };
 
 const vendorCategories: VendorCategory[] = [
-  { label: 'Weddings', id: 'weddings' },
-  { label: 'Businesses & Brands', id: 'businesses-brands' },
-  { label: 'Events', id: 'events' },
-  { label: 'Music & Creative', id: 'music-creative' },
-  { label: 'Budget-Friendly', id: 'budget-friendly' },
-  { label: 'Premium', id: 'premium' },
+  { label: 'Wedding Videographers', id: 'weddings' },
+  { label: 'Brand & Business Videographers', id: 'businesses-brands' },
+  { label: 'Event Videographers', id: 'events' },
+  { label: 'Music Video Videographers', id: 'music-creative' },
+  { label: 'Budget-Friendly Videographers', id: 'budget-friendly' },
+  { label: 'Premium Videographers', id: 'premium' },
 ];
 
 const featured: FeaturedVendor[] = [
@@ -287,15 +287,13 @@ export default function Home() {
             <Parallax speed={0.016}>
               <p className="mb-4 text-sm uppercase tracking-[0.2em] text-[#7a6d66]">Nashville, TN</p>
               <h1 className="max-w-5xl text-4xl font-semibold leading-[1.02] tracking-tight md:text-7xl">
-                I Need a Videographer Nashville
+                Nashville Videographers — Find the Right Videographer in Nashville
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-[#4b4541] md:text-xl">
-                A simple way to find a solid videographer in Nashville without digging through comments,
-                guessing, or wasting time.
+                Find and hire a videographer in Nashville for weddings, brands, events, and more — without digging through comments, guessing, or wasting time.
               </p>
               <p className="mt-4 max-w-2xl text-base leading-7 text-[#4b4541] md:text-lg">
-                I run a local group and see a lot of work come through. This is a filtered list of
-                people who are active, reliable, and consistently doing strong work.
+                This is a curated list of Nashville videographers who are active, reliable, and consistently doing strong work across weddings, brands, events, and creative projects.
               </p>
               <p className="mt-6 max-w-2xl text-base leading-7 text-[#4b4541]">
                 No endless scrolling. No random guessing. Just a cleaner way to find the right fit faster.
@@ -337,7 +335,7 @@ export default function Home() {
         <Reveal className="max-w-3xl" delay={60}>
           <p className="text-sm uppercase tracking-[0.18em] text-[#7a6d66]">Why this exists</p>
           <p className="mt-4 text-lg leading-8 text-[#1A1A1A]">
-            I run a local group and see a lot of videographer work come through. This site exists to make hiring easier — by giving Nashville businesses, couples, and creatives a cleaner place to start.
+            I run a local group and see a lot of videographer work come through. This site exists to make hiring a videographer in Nashville easier — giving businesses, couples, and creatives a cleaner place to start.
           </p>
         </Reveal>
       </section>
@@ -364,9 +362,12 @@ export default function Home() {
       <section id="categories" className="mx-auto max-w-6xl px-6 py-14 md:px-10 md:py-16">
         <Reveal delay={30}>
           <p className="text-sm uppercase tracking-[0.18em] text-[#7a6d66]">Start here</p>
-          <h2 className="mt-2 text-3xl font-semibold">What are you looking for?</h2>
+          <h2 className="mt-2 text-3xl font-semibold">Find Nashville videographers by category</h2>
           <p className="mt-4 max-w-2xl text-base leading-7 text-[#4b4541]">
-            Start with the type of project you need. This keeps the search simple and makes it easier to find the right fit faster.
+            Browse Nashville videographers by the type of project you need — including weddings, business and brand videos, events, music videos, budget-friendly shoots, and premium productions.
+          </p>
+          <p className="mt-4 max-w-2xl text-sm leading-6 text-[#4b4541]">
+            This keeps the search simple and makes it easier to hire the right videographer in Nashville faster.
           </p>
         </Reveal>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
