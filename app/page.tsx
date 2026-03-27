@@ -40,21 +40,21 @@ const vendorCategories: VendorCategory[] = [
 const featured: FeaturedVendor[] = [
   {
     name: 'Brandon Rice',
-    role: 'Wedding Filmmaker',
+    role: 'Wedding Videographer',
     desc: 'Real, story-driven wedding films that feel like the day itself — not a highlight of it.',
     image: '/brandon.jpg',
     link: 'https://www.brandonricefilms.com',
   },
   {
     name: 'Chris Cameron',
-    role: 'Brand / Business Video',
+    role: 'Brand Videographer',
     desc: 'Cinematographer and producer focused on clean, story-driven video for brands, interviews, and music-driven projects.',
     image: '/chris.jpg',
     link: 'https://www.narrativenashville.com/',
   },
   {
     name: 'Ryan Schmidt',
-    role: 'Event / Music Video',
+    role: 'Event & Music Video Videographer',
     desc: 'Photographer and videographer focused on raw, high-energy visuals for live shows, artists, and brands. Strong fit for music-driven content, event coverage, and story-led visuals that people actually connect with.',
     image: '/ryan.jpg',
     link: 'https://www.ryanschmidt.de/?fbclid=IwY2xjawQw7w1leHRuA2FlbQIxMABicmlkETF2c3lvWVhBVWluWFFlcmxEc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHoXhLfOJ_L5xchvWPhxCI6Wu28WJEveusKMJD8-mZgP5lR-tb252RwrE_WgH_aem_HGOxXQ5J4-VqGcbL7bt3HQ',
@@ -390,9 +390,12 @@ export default function Home() {
         <div id="featured" className="mx-auto max-w-6xl px-6 py-16 md:px-10">
           <Reveal delay={30}>
             <p className="text-sm uppercase tracking-[0.18em] text-[#7a6d66]">Featured</p>
-            <h2 className="mt-2 text-3xl font-semibold">Good places to start</h2>
+            <h2 className="mt-2 text-3xl font-semibold">Featured Nashville videographers</h2>
             <p className="mt-4 max-w-2xl text-base leading-7 text-[#4b4541]">
-              These are the strongest starting points. Clear specialties, strong positioning, and people I’d feel confident pointing someone to first.
+              These are the strongest starting points if you need to hire a videographer in Nashville. Each featured videographer has a clear specialty, strong positioning, and work I’d feel confident pointing someone to first.
+            </p>
+            <p className="mt-4 max-w-2xl text-sm leading-6 text-[#4b4541]">
+              Start here if you’re looking for wedding videographers, brand videographers, event videographers, or music video videographers in Nashville.
             </p>
           </Reveal>
 
