@@ -2,6 +2,7 @@
 
 import type { CSSProperties, ElementType, ReactNode } from 'react';
 import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 
 type VendorCategory = {
   label: string;
@@ -59,6 +60,13 @@ const featured: FeaturedVendor[] = [
     image: '/ryan.jpg',
     link: 'https://www.ryanschmidt.de/?fbclid=IwY2xjawQw7w1leHRuA2FlbQIxMABicmlkETF2c3lvWVhBVWluWFFlcmxEc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHoXhLfOJ_L5xchvWPhxCI6Wu28WJEveusKMJD8-mZgP5lR-tb252RwrE_WgH_aem_HGOxXQ5J4-VqGcbL7bt3HQ',
   },
+  {
+    name: 'Brandon McKay',
+    role: 'Event Videographer & Photographer',
+    desc: 'Clean, intentional storytelling that captures the full event experience. Focused on well-produced events — from corporate gatherings to live performances — with a style built to preserve moments that can’t be recreated, only relived.',
+    image: '/brandon-mckay.jpg',
+    link: 'https://brandonallancreative.studio/live-events',
+  },
 ];
 
 const stats: Stat[] = [
@@ -94,6 +102,29 @@ const tiers: Tier[] = [
     price: '$99/mo',
     desc: 'More visibility when people are actively looking to hire.',
     points: ['Top placement', 'Short written positioning', 'Higher visibility'],
+  },
+];
+
+const faqs = [
+  {
+    question: 'How do I find the right videographer in Nashville?',
+    answer:
+      'Start by narrowing it down by category, budget, and style. If you need a wedding videographer, brand videographer, event videographer, or music video videographer in Nashville, the fastest move is to begin with a curated shortlist instead of digging through random comments.',
+  },
+  {
+    question: 'How much does it cost to hire a videographer in Nashville?',
+    answer:
+      'Pricing depends on the type of project, timeline, and experience level. Wedding videographers, event videographers, and brand videographers in Nashville can vary widely, which is why having a clear project type and budget range helps narrow the right fit faster.',
+  },
+  {
+    question: 'Can I get matched with a Nashville videographer instead of browsing?',
+    answer:
+      'Yes. If you do not want to sort through options yourself, you can submit a quick match request and get pointed toward a few Nashville videographers that fit your project, budget, and timeline.',
+  },
+  {
+    question: 'Do you have Nashville wedding videographers, brand videographers, and second shooters?',
+    answer:
+      'Yes. The list includes wedding videographers, brand and business videographers, event videographers, music video videographers, and flexible collaborators for second shooter or support roles in Nashville.',
   },
 ];
 
@@ -374,12 +405,20 @@ export default function Home() {
           {vendorCategories.map((item, index) => (
             <Reveal key={item.id} delay={100 + index * 50}>
               <Parallax speed={0.016 + (index % 3) * 0.004}>
-                <a
-                  href={`#${item.id}`}
+                <Link
+                  href={
+                    item.id === 'weddings'
+                      ? '/wedding-videographers-nashville'
+                      : item.id === 'businesses-brands'
+                        ? '/brand-videographers-nashville'
+                        : item.id === 'events'
+                          ? '/event-videographers-nashville'
+                          : `#${item.id}`
+                  }
                   className="block rounded-2xl border border-black/10 bg-white/70 px-5 py-6 shadow-sm transition hover:-translate-y-0.5 hover:border-black/20 hover:bg-white"
                 >
                   {item.label}
-                </a>
+                </Link>
               </Parallax>
             </Reveal>
           ))}
@@ -510,6 +549,27 @@ export default function Home() {
               </div>
             </Parallax>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-14 md:px-10 md:py-16">
+        <Reveal delay={30}>
+          <p className="text-sm uppercase tracking-[0.18em] text-[#7a6d66]">FAQ</p>
+          <h2 className="mt-2 text-3xl font-semibold">Questions about hiring a videographer in Nashville</h2>
+          <p className="mt-4 max-w-2xl text-base leading-7 text-[#4b4541]">
+            If you are trying to hire a videographer in Nashville, these are the most common questions people run into before choosing the right fit.
+          </p>
+        </Reveal>
+
+        <div className="mt-8 grid gap-4 md:grid-cols-2">
+          {faqs.map((item, index) => (
+            <Reveal key={item.question} delay={90 + index * 50}>
+              <div className="rounded-2xl border border-black/10 bg-white/70 p-5 shadow-sm">
+                <h3 className="text-lg font-semibold">{item.question}</h3>
+                <p className="mt-3 text-sm leading-6 text-[#4b4541]">{item.answer}</p>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </section>
 
