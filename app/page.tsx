@@ -342,24 +342,24 @@ export default function Home() {
         </div>
       </header>
 
-      <section id="top" className="mx-auto max-w-6xl px-6 py-14 md:px-10 md:py-18 lg:py-20">
-        <div className="grid items-start gap-12 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-12 xl:grid-cols-[minmax(0,1.02fr)_340px]">
-          <Reveal className="max-w-[760px]" delay={40}>
+      <section id="top" className="mx-auto max-w-6xl px-6 py-12 md:px-10 md:py-16 lg:py-18">
+        <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,0.96fr)_300px] lg:gap-10 xl:grid-cols-[minmax(0,1fr)_320px]">
+          <Reveal className="max-w-[700px]" delay={40}>
             <Parallax speed={0.016}>
               <p className="mb-4 text-sm uppercase tracking-[0.2em] text-[#7a6d66]">Nashville, TN</p>
-              <h1 className="max-w-[9.5ch] text-[3.4rem] font-semibold leading-[0.98] tracking-tight md:text-[4.6rem] lg:text-[5.4rem] xl:text-[6rem]">
+              <h1 className="max-w-[8.4ch] text-[3.2rem] font-semibold leading-[0.95] tracking-[-0.04em] md:text-[4.35rem] lg:text-[5.15rem] xl:text-[5.6rem]">
                 Nashville Videographers — Find the Right Videographer in Nashville
               </h1>
-              <p className="mt-8 max-w-[720px] text-lg leading-8 text-[#4b4541] md:text-[1.35rem] md:leading-9">
+              <p className="mt-7 max-w-[620px] text-[1.02rem] leading-8 text-[#4b4541] md:text-[1.22rem] md:leading-[2.05rem]">
                 Find and hire a videographer in Nashville for weddings, brands, events, and more — without digging through comments, guessing, or wasting time.
               </p>
-              <p className="mt-5 max-w-[700px] text-base leading-8 text-[#4b4541] md:text-[1.08rem]">
+              <p className="mt-5 max-w-[610px] text-[0.98rem] leading-8 text-[#4b4541] md:text-[1.02rem]">
                 This is a curated list of Nashville videographers who are active, reliable, and consistently doing strong work across weddings, brands, events, and creative projects.
               </p>
-              <p className="mt-8 max-w-[700px] text-[0.98rem] leading-7 text-[#4b4541]">
+              <p className="mt-7 max-w-[610px] text-[0.94rem] leading-7 text-[#4b4541]">
                 No endless scrolling. No random guessing. Just a cleaner way to find the right fit faster.
               </p>
-              <div className="mt-10 flex flex-wrap gap-4 lg:mt-12">
+              <div className="mt-9 flex flex-wrap gap-4 lg:mt-10">
                 <a
                   href="#categories"
                   className="rounded-full px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:brightness-105 hover:shadow-md"
@@ -377,13 +377,13 @@ export default function Home() {
             </Parallax>
           </Reveal>
 
-          <div className="grid gap-4 self-start lg:pt-4">
+          <div className="grid gap-4 self-start pt-2 lg:pt-6">
             {stats.map((item, index) => (
               <Reveal key={item.label} delay={180 + index * 90}>
                 <Parallax speed={0.024 + index * 0.006}>
-                  <div className="rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm backdrop-blur-[2px]">
-                    <p className="text-2xl font-semibold tracking-tight">{item.value}</p>
-                    <p className="mt-2 text-sm text-[#4b4541]">{item.label}</p>
+                  <div className="rounded-[1.9rem] border border-black/10 bg-white/75 px-6 py-5 shadow-sm backdrop-blur-[2px]">
+                    <p className="text-[2rem] font-semibold tracking-tight">{item.value}</p>
+                    <p className="mt-2 text-[0.92rem] text-[#4b4541]">{item.label}</p>
                   </div>
                 </Parallax>
               </Reveal>
