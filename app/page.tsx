@@ -312,24 +312,24 @@ export default function Home() {
         </div>
       </header>
 
-      <section id="top" className="mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-20">
-        <div className="grid items-end gap-14 lg:grid-cols-[minmax(0,1.1fr)_360px] lg:gap-10">
-          <Reveal className="max-w-4xl" delay={40}>
+      <section id="top" className="mx-auto max-w-6xl px-6 py-14 md:px-10 md:py-18 lg:py-20">
+        <div className="grid items-start gap-12 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-12 xl:grid-cols-[minmax(0,1.02fr)_340px]">
+          <Reveal className="max-w-[760px]" delay={40}>
             <Parallax speed={0.016}>
               <p className="mb-4 text-sm uppercase tracking-[0.2em] text-[#7a6d66]">Nashville, TN</p>
-              <h1 className="max-w-5xl text-4xl font-semibold leading-[1.02] tracking-tight md:text-7xl">
+              <h1 className="max-w-[9.5ch] text-[3.4rem] font-semibold leading-[0.98] tracking-tight md:text-[4.6rem] lg:text-[5.4rem] xl:text-[6rem]">
                 Nashville Videographers — Find the Right Videographer in Nashville
               </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-[#4b4541] md:text-xl">
+              <p className="mt-8 max-w-[720px] text-lg leading-8 text-[#4b4541] md:text-[1.35rem] md:leading-9">
                 Find and hire a videographer in Nashville for weddings, brands, events, and more — without digging through comments, guessing, or wasting time.
               </p>
-              <p className="mt-4 max-w-2xl text-base leading-7 text-[#4b4541] md:text-lg">
+              <p className="mt-5 max-w-[700px] text-base leading-8 text-[#4b4541] md:text-[1.08rem]">
                 This is a curated list of Nashville videographers who are active, reliable, and consistently doing strong work across weddings, brands, events, and creative projects.
               </p>
-              <p className="mt-6 max-w-2xl text-base leading-7 text-[#4b4541]">
+              <p className="mt-8 max-w-[700px] text-[0.98rem] leading-7 text-[#4b4541]">
                 No endless scrolling. No random guessing. Just a cleaner way to find the right fit faster.
               </p>
-              <div className="mt-10 flex flex-wrap gap-4">
+              <div className="mt-10 flex flex-wrap gap-4 lg:mt-12">
                 <a
                   href="#categories"
                   className="rounded-full px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:brightness-105 hover:shadow-md"
@@ -347,11 +347,11 @@ export default function Home() {
             </Parallax>
           </Reveal>
 
-          <div className="grid gap-4 self-stretch">
+          <div className="grid gap-4 self-start lg:pt-4">
             {stats.map((item, index) => (
               <Reveal key={item.label} delay={180 + index * 90}>
                 <Parallax speed={0.024 + index * 0.006}>
-                  <div className="rounded-3xl border border-black/10 bg-white/60 p-6 shadow-sm">
+                  <div className="rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm backdrop-blur-[2px]">
                     <p className="text-2xl font-semibold tracking-tight">{item.value}</p>
                     <p className="mt-2 text-sm text-[#4b4541]">{item.label}</p>
                   </div>
