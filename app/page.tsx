@@ -395,7 +395,7 @@ export default function Home() {
         <Reveal className="max-w-3xl" delay={60}>
           <p className="text-sm uppercase tracking-[0.18em] text-[#7a6d66]">Why this exists</p>
           <p className="mt-4 text-lg leading-8 text-[#1A1A1A]">
-            I run a local group and see a lot of videographer work come through. This site exists to make hiring a videographer in Nashville easier — giving businesses, couples, and creatives a cleaner place to start.
+            I run one of the largest videographer communities in Nashville and see work requests come through daily. This site exists to make hiring a videographer in Nashville easier — giving businesses, couples, and creatives a cleaner place to start.
           </p>
         </Reveal>
       </section>
@@ -491,6 +491,7 @@ export default function Home() {
           <Reveal delay={30}>
             <p className="text-sm uppercase tracking-[0.18em] text-[#7a6d66]">Featured</p>
             <h2 className="mt-2 text-3xl font-semibold">Featured Nashville videographers</h2>
+            <p className="mt-2 text-sm text-[#4b4541]">Handpicked. Not random.</p>
             <p className="mt-4 max-w-2xl text-base leading-7 text-[#4b4541]">
               Start here. These are the strongest videographers to consider first.
             </p>
@@ -577,7 +578,7 @@ export default function Home() {
             <Parallax speed={0.024}>
               <div className="rounded-3xl border border-black/10 bg-[#FDF7F0] p-6 shadow-sm">
                 <p className="text-sm uppercase tracking-[0.14em] text-[#7a6d66]">Quick Match Request</p>
-                <h3 className="mt-3 text-2xl font-semibold tracking-tight">Tell me the basics.</h3>
+                <h3 className="mt-3 text-2xl font-semibold tracking-tight">Find My Videographer (1 minute)</h3>
                 <p className="mt-4 max-w-md text-sm leading-6 text-[#4b4541]">
                   The form takes about a minute and asks for your project type, budget, timeline, and a short description of what you need filmed.
                 </p>
@@ -601,7 +602,7 @@ export default function Home() {
                 </ExternalLink>
 
                 <p className="mt-4 text-xs leading-5 text-[#7a6d66]">
-                  No searching. No guessing. Just the right fit.
+                  No searching. No guessing. I’ll personally point you to 2–3 strong options.
                 </p>
               </div>
             </Parallax>
