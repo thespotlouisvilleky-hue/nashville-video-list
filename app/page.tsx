@@ -3,6 +3,7 @@
 import type { CSSProperties, ElementType, ReactNode } from 'react';
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 type VendorCategory = {
   label: string;
@@ -53,7 +54,7 @@ const featured: FeaturedVendor[] = [
     category: 'weddings',
     role: 'Wedding Videographer',
     desc: 'Cinematic, emotion-driven wedding films built around warmth, movement, and the real in-between moments that make the day unforgettable.',
-    image: 'https://www.jotform.com/uploads/ineedavideographernashville/260847284972066/6508107448019638770/image-asset%20copy.jpg',
+    image: '/matthew.jpg',
     link: 'https://vimeo.com/showcase/11957207?share=copy&fl=sm&fe=fe',
   },
   {
@@ -61,7 +62,7 @@ const featured: FeaturedVendor[] = [
     category: 'weddings',
     role: 'Wedding Videographer',
     desc: 'Documentary-minded wedding films shaped with a story-first approach, blending candid coverage with thoughtful structure and emotional pacing.',
-    image: 'https://www.jotform.com/uploads/ineedavideographernashville/260847284972066/6506620781114070614/Kubota%20Pic.jpg',
+    image: '/jack.jpg',
     link: 'https://jackpearlmedia.com/',
   },
   {
@@ -93,7 +94,7 @@ const featured: FeaturedVendor[] = [
     category: 'music-creative',
     role: 'Music Video Director',
     desc: 'Dreamy, colorful, nostalgic music videos and visualizers built for artists who want cinematic, emotionally memorable visuals.',
-    image: 'https://www.jotform.com/uploads/ineedavideographernashville/260847284972066/6507013709327416627/PhotoCollage_1770596995374.jpg',
+    image: '/colin.jpg',
     link: 'http://www.colinsvisuals.com',
   },
 ];
@@ -514,9 +515,11 @@ export default function Home() {
                         <Parallax key={item.name + item.role} speed={0.018 + index * 0.004}>
                           <div className="w-[320px] flex min-h-[520px] flex-col rounded-3xl border border-black/10 bg-[#FDF7F0] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
                             {item.image && (
-                              <img
+                              <Image
                                 src={item.image}
                                 alt={item.name}
+                                width={400}
+                                height={300}
                                 className="mb-4 h-48 w-full rounded-2xl object-cover"
                               />
                             )}
