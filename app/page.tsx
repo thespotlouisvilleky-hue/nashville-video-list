@@ -11,6 +11,7 @@ type VendorCategory = {
 
 type FeaturedVendor = {
   name: string;
+  category: string;
   role: string;
   desc: string;
   image?: string;
@@ -41,31 +42,59 @@ const vendorCategories: VendorCategory[] = [
 const featured: FeaturedVendor[] = [
   {
     name: 'Brandon Rice',
+    category: 'weddings',
     role: 'Wedding Videographer',
     desc: 'Real, story-driven wedding films that feel like the day itself — not a highlight of it.',
     image: '/brandon.jpg',
     link: 'https://www.brandonricefilms.com',
   },
   {
+    name: 'Matthew Lynn',
+    category: 'weddings',
+    role: 'Wedding Videographer',
+    desc: 'Cinematic, emotion-driven wedding films built around warmth, movement, and the real in-between moments that make the day unforgettable.',
+    image: 'https://www.jotform.com/uploads/ineedavideographernashville/260847284972066/6508107448019638770/image-asset%20copy.jpg',
+    link: 'https://vimeo.com/showcase/11957207?share=copy&fl=sm&fe=fe',
+  },
+  {
+    name: 'Jack Pearl',
+    category: 'weddings',
+    role: 'Wedding Videographer',
+    desc: 'Documentary-minded wedding films shaped with a story-first approach, blending candid coverage with thoughtful structure and emotional pacing.',
+    image: 'https://www.jotform.com/uploads/ineedavideographernashville/260847284972066/6506620781114070614/Kubota%20Pic.jpg',
+    link: 'https://jackpearlmedia.com/',
+  },
+  {
     name: 'Chris Cameron',
+    category: 'businesses-brands',
     role: 'Brand Videographer',
     desc: 'Cinematographer and producer focused on clean, story-driven video for brands, interviews, and music-driven projects.',
     image: '/chris.jpg',
     link: 'https://www.narrativenashville.com/',
   },
   {
+    name: 'Brandon McKay',
+    category: 'events',
+    role: 'Event Videographer & Photographer',
+    desc: 'Clean, intentional storytelling that captures the full event experience. Focused on well-produced events — from corporate gatherings to live performances — with a style built to preserve moments that can’t be recreated, only relived.',
+    image: '/brandon-mckay.jpg',
+    link: 'https://brandonallancreative.studio/live-events',
+  },
+  {
     name: 'Ryan Schmidt',
+    category: 'events',
     role: 'Event & Music Video Videographer',
     desc: 'Photographer and videographer focused on raw, high-energy visuals for live shows, artists, and brands. Strong fit for music-driven content, event coverage, and story-led visuals that people actually connect with.',
     image: '/ryan.jpg',
     link: 'https://www.ryanschmidt.de/?fbclid=IwY2xjawQw7w1leHRuA2FlbQIxMABicmlkETF2c3lvWVhBVWluWFFlcmxEc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHoXhLfOJ_L5xchvWPhxCI6Wu28WJEveusKMJD8-mZgP5lR-tb252RwrE_WgH_aem_HGOxXQ5J4-VqGcbL7bt3HQ',
   },
   {
-    name: 'Brandon McKay',
-    role: 'Event Videographer & Photographer',
-    desc: 'Clean, intentional storytelling that captures the full event experience. Focused on well-produced events — from corporate gatherings to live performances — with a style built to preserve moments that can’t be recreated, only relived.',
-    image: '/brandon-mckay.jpg',
-    link: 'https://brandonallancreative.studio/live-events',
+    name: 'Colin Nguyen',
+    category: 'music-creative',
+    role: 'Music Video Director',
+    desc: 'Dreamy, colorful, nostalgic music videos and visualizers built for artists who want cinematic, emotionally memorable visuals.',
+    image: 'https://www.jotform.com/uploads/ineedavideographernashville/260847284972066/6507013709327416627/PhotoCollage_1770596995374.jpg',
+    link: 'http://www.colinsvisuals.com',
   },
 ];
 
@@ -438,38 +467,43 @@ export default function Home() {
             </p>
           </Reveal>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            <span id="weddings" className="absolute -mt-24" aria-hidden="true"></span>
-            <span id="businesses-brands" className="absolute -mt-24" aria-hidden="true"></span>
-            <span id="events" className="absolute -mt-24" aria-hidden="true"></span>
-            <span id="music-creative" className="absolute -mt-24" aria-hidden="true"></span>
-            <span id="budget-friendly" className="absolute -mt-24" aria-hidden="true"></span>
-            <span id="premium" className="absolute -mt-24" aria-hidden="true"></span>
+          <div className="mt-10 space-y-12">
+            {vendorCategories.map((category, groupIndex) => {
+              const vendors = featured.filter((item) => item.category === category.id);
+              if (!vendors.length) return null;
 
-            {featured.map((item, index) => (
-              <Reveal key={item.name + item.role} delay={120 + index * 90}>
-                <Parallax speed={0.026 + index * 0.006}>
-                  <div className="flex h-full flex-col rounded-3xl border border-black/10 bg-[#FDF7F0] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-                    {item.image && (
-                      <img
-                        src={item.image}
-                        alt={item.name}
-                        className="mb-4 h-48 w-full rounded-2xl object-cover"
-                      />
-                    )}
-                    <p className="text-sm uppercase tracking-[0.14em] text-[#7a6d66]">{item.role}</p>
-                    <h3 className="mt-2 text-xl font-semibold">{item.name}</h3>
-                    <p className="mt-3 flex-1 text-sm leading-6 text-[#4b4541]">{item.desc}</p>
-                    <ExternalLink
-                      href={item.link}
-                      className="mt-6 inline-block text-sm font-medium underline underline-offset-4"
-                    >
-                      View Work
-                    </ExternalLink>
+              return (
+                <Reveal key={category.id} delay={120 + groupIndex * 40}>
+                  <div id={category.id} className="scroll-mt-28">
+                    <p className="text-sm uppercase tracking-[0.18em] text-[#7a6d66]">{category.label}</p>
+                    <div className="mt-4 grid gap-6 md:grid-cols-2 xl:grid-cols-3 justify-items-center">
+                      {vendors.map((item, index) => (
+                        <Parallax key={item.name + item.role} speed={0.018 + index * 0.004}>
+                          <div className="w-full max-w-sm flex h-full min-h-[520px] flex-col rounded-3xl border border-black/10 bg-[#FDF7F0] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+                            {item.image && (
+                              <img
+                                src={item.image}
+                                alt={item.name}
+                                className="mb-4 h-48 w-full rounded-2xl object-cover"
+                              />
+                            )}
+                            <p className="text-sm uppercase tracking-[0.14em] text-[#7a6d66]">{item.role}</p>
+                            <h3 className="mt-2 text-xl font-semibold">{item.name}</h3>
+                            <p className="mt-3 flex-1 text-sm leading-6 text-[#4b4541]">{item.desc}</p>
+                            <ExternalLink
+                              href={item.link}
+                              className="mt-6 inline-block text-sm font-medium underline underline-offset-4"
+                            >
+                              View Work
+                            </ExternalLink>
+                          </div>
+                        </Parallax>
+                      ))}
+                    </div>
                   </div>
-                </Parallax>
-              </Reveal>
-            ))}
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </Parallax>
