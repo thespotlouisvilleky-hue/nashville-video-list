@@ -364,13 +364,13 @@ export default function Home() {
                   className="rounded-full px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:brightness-105 hover:shadow-md"
                   style={{ backgroundColor: accentColor }}
                 >
-                  Browse Videographers
+                  Find My Videographer
                 </a>
                 <ExternalLink
                   href={matchFormLink}
                   className="rounded-full border border-black/15 px-6 py-3 text-sm transition hover:bg-black/5"
                 >
-                  Get Help Choosing
+                  Browse Options
                 </ExternalLink>
               </div>
             </Parallax>
@@ -492,10 +492,10 @@ export default function Home() {
             <p className="text-sm uppercase tracking-[0.18em] text-[#7a6d66]">Featured</p>
             <h2 className="mt-2 text-3xl font-semibold">Featured Nashville videographers</h2>
             <p className="mt-4 max-w-2xl text-base leading-7 text-[#4b4541]">
-              These are the strongest starting points if you need to hire a videographer in Nashville. Each featured videographer has a clear specialty, strong positioning, and work I’d feel confident pointing someone to first.
+              Start here. These are the strongest videographers to consider first.
             </p>
             <p className="mt-4 max-w-2xl text-sm leading-6 text-[#4b4541]">
-              Start here if you’re looking for wedding videographers, brand videographers, event videographers, or music video videographers in Nashville.
+              Pick one that feels right — or request a match below.
             </p>
           </Reveal>
 
@@ -526,7 +526,7 @@ export default function Home() {
                               href={item.link}
                               className="mt-6 inline-block text-sm font-medium underline underline-offset-4"
                             >
-                              View Work
+                              View Work →
                             </ExternalLink>
                           </div>
                         </Parallax>
@@ -561,22 +561,13 @@ export default function Home() {
         </div>
       </section>
 
-      <Parallax as="section" speed={0.008} className="border-t border-black/10 bg-[#FDF7F0]">
-        <div className="mx-auto max-w-6xl px-6 py-14 md:px-10">
-          <Reveal delay={40}>
-            <h2 className="text-3xl font-semibold">Hiring a videographer shouldn’t feel complicated.</h2>
-            <p className="mt-4 max-w-2xl text-base leading-7 text-[#4b4541]">
-              Start with featured, browse by category, or request a match if you want help narrowing it down. The goal is simple — make the decision easier.
-            </p>
-          </Reveal>
-        </div>
-      </Parallax>
+
 
       <section id="match" className="border-t border-black/10 bg-[#F7F1EA]">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-2 md:px-10">
           <Reveal delay={50}>
             <p className="text-sm uppercase tracking-[0.18em] text-[#7a6d66]">Need help?</p>
-            <h2 className="mt-2 text-3xl font-semibold">I’ll point you toward a few solid options</h2>
+            <h2 className="mt-2 text-3xl font-semibold">Not sure who to choose? I’ll match you with the right videographer.</h2>
             <p className="mt-4 max-w-xl leading-7 text-[#4b4541]">
               Tell me what you need, your budget, and your timeline. I’ll point you toward a few Nashville videographers that make sense.
             </p>
@@ -606,11 +597,11 @@ export default function Home() {
                   className="mt-6 inline-block rounded-full px-5 py-2 text-sm font-medium text-white shadow-sm transition hover:brightness-105 hover:shadow-md"
                   style={{ backgroundColor: accentColor } as CSSProperties}
                 >
-                  Open Match Form
+                  Get Matched (1 minute)
                 </ExternalLink>
 
                 <p className="mt-4 text-xs leading-5 text-[#7a6d66]">
-                  You’ll open a short form in a new tab, and I’ll point you toward a few solid options.
+                  No searching. No guessing. Just the right fit.
                 </p>
               </div>
             </Parallax>
@@ -684,7 +675,7 @@ export default function Home() {
           <Reveal delay={40}>
             <p className="text-sm uppercase tracking-[0.18em] text-[#7a6d66]">Need a place to start?</p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-              Start with featured, then get matched if you want help narrowing it down.
+              Start with featured — or get matched if you want help choosing.
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-[#4b4541]">
               The goal here is simple: make it easier for Nashville businesses and creatives to find good people faster.
