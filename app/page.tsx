@@ -419,40 +419,72 @@ export default function Home() {
         </div>
       </Parallax>
 
-      <section id="categories" className="mx-auto max-w-6xl px-6 py-14 md:px-10 md:py-16">
-        <Reveal delay={30}>
-          <p className="text-sm uppercase tracking-[0.18em] text-[#7a6d66]">Start here</p>
-          <h2 className="mt-2 text-3xl font-semibold">Find Nashville videographers by category</h2>
-          <p className="mt-4 max-w-2xl text-base leading-7 text-[#4b4541]">
-            Browse Nashville videographers by the type of project you need — including weddings, business and brand videos, events, music videos, budget-friendly shoots, and premium productions.
-          </p>
-          <p className="mt-4 max-w-2xl text-sm leading-6 text-[#4b4541]">
-            This keeps the search simple and makes it easier to hire the right videographer in Nashville faster.
-          </p>
-        </Reveal>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {vendorCategories.map((item, index) => (
-            <Reveal key={item.id} delay={100 + index * 50}>
-              <Parallax speed={0.016 + (index % 3) * 0.004}>
-                <Link
-                  href={
-                    item.id === 'weddings'
-                      ? '/wedding-videographers-nashville'
-                      : item.id === 'businesses-brands'
-                        ? '/brand-videographers-nashville'
-                        : item.id === 'events'
-                          ? '/event-videographers-nashville'
-                          : `#${item.id}`
-                  }
-                  className="block rounded-2xl border border-black/10 bg-white/70 px-5 py-6 shadow-sm transition hover:-translate-y-0.5 hover:border-black/20 hover:bg-white"
-                >
-                  {item.label}
-                </Link>
-              </Parallax>
-            </Reveal>
-          ))}
-        </div>
-      </section>
+      <section id="categories" className="mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-20">
+  <Reveal delay={30}>
+    <p className="text-sm uppercase tracking-[0.18em] text-[#7a6d66]">Start here</p>
+    <h2 className="mt-2 max-w-3xl text-3xl font-semibold tracking-tight md:text-5xl">
+      What are you trying to film?
+    </h2>
+    <p className="mt-4 max-w-2xl text-base leading-7 text-[#4b4541] md:text-lg md:leading-8">
+      Pick the path that feels closest. This is the fastest way to find the right videographer in Nashville without getting lost in a giant directory.
+    </p>
+  </Reveal>
+
+  <div className="mt-10 grid gap-5 lg:grid-cols-2">
+    {[
+      {
+        eyebrow: 'Weddings',
+        title: 'Capture the full day, not just the highlights',
+        desc: 'For couples who want emotion, pacing, and the real in-between moments preserved beautifully.',
+        href: '/wedding-videographers-nashville',
+      },
+      {
+        eyebrow: 'Business / Brand',
+        title: 'Make your business look as strong online as it feels in person',
+        desc: 'For founders, teams, and local businesses who need brand films, interviews, and commercial content that actually connects.',
+        href: '/brand-videographers-nashville',
+      },
+      {
+        eyebrow: 'Events',
+        title: 'Document the energy, not just the schedule',
+        desc: 'For live events, launches, performances, and gatherings that need to feel alive when people watch them back.',
+        href: '/event-videographers-nashville',
+      },
+      {
+        eyebrow: 'Music / Creative',
+        title: 'Visuals that actually match the feeling of the work',
+        desc: 'For artists and creative projects that need atmosphere, style, and a point of view — not just coverage.',
+        href: '#music-creative',
+      },
+    ].map((item, index) => (
+      <Reveal key={item.title} delay={90 + index * 50}>
+        <Parallax speed={0.014 + (index % 2) * 0.004}>
+          <Link
+            href={item.href}
+            className="group flex min-h-[260px] flex-col justify-between rounded-[2rem] border border-black/10 bg-[#EFE7DE] p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-black/20 hover:bg-[#F3ECE4] hover:shadow-md md:p-9"
+          >
+            <div>
+              <p className="text-sm uppercase tracking-[0.18em] text-[#7a6d66]">
+                {item.eyebrow}
+              </p>
+              <h3 className="mt-5 max-w-[18ch] text-2xl font-semibold leading-tight tracking-tight md:text-[2rem]">
+                {item.title}
+              </h3>
+              <p className="mt-5 max-w-[52ch] text-sm leading-7 text-[#4b4541] md:text-base md:leading-8">
+                {item.desc}
+              </p>
+            </div>
+
+            <div className="mt-8 flex items-center justify-between text-sm font-medium text-[#1A1A1A]">
+              <span>Explore this path</span>
+              <span className="transition duration-300 group-hover:translate-x-1">→</span>
+            </div>
+          </Link>
+        </Parallax>
+      </Reveal>
+    ))}
+  </div>
+</section>
 
       <Parallax as="section" speed={0.01} className="border-t border-black/10 bg-[#EFE7DE]">
         <div id="featured" className="mx-auto max-w-6xl px-6 py-16 md:px-10">
@@ -476,10 +508,10 @@ export default function Home() {
                 <Reveal key={category.id} delay={120 + groupIndex * 40}>
                   <div id={category.id} className="scroll-mt-28">
                     <p className="text-sm uppercase tracking-[0.18em] text-[#7a6d66]">{category.label}</p>
-                    <div className="mt-4 grid gap-6 md:grid-cols-2 xl:grid-cols-3 justify-items-center">
+                    <div className="mt-4 flex flex-wrap justify-center gap-6">
                       {vendors.map((item, index) => (
                         <Parallax key={item.name + item.role} speed={0.018 + index * 0.004}>
-                          <div className="w-full max-w-sm flex h-full min-h-[520px] flex-col rounded-3xl border border-black/10 bg-[#FDF7F0] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+                          <div className="w-[320px] flex min-h-[520px] flex-col rounded-3xl border border-black/10 bg-[#FDF7F0] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
                             {item.image && (
                               <img
                                 src={item.image}
