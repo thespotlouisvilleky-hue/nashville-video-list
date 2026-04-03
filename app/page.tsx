@@ -355,17 +355,14 @@ export default function Home() {
                   Find the Right Videographer
                 </span>
                 <span className="mt-3 block text-[2.2rem] leading-[0.98] md:text-[3.25rem] lg:text-[3.8rem] xl:text-[4.1rem]">
-                  in Nashville
+                  Without Guessing
                 </span>
               </h1>
               <p className="mt-8 max-w-[640px] text-[1.02rem] leading-8 text-[#4b4541] md:text-[1.16rem] md:leading-[1.95rem]">
-                Find and hire a videographer in Nashville for weddings, brands, events, and more — without digging through comments, guessing, or wasting time.
+                Skip the endless searching. Start with a curated shortlist of Nashville videographers who are actually worth considering.
               </p>
               <p className="mt-5 max-w-[610px] text-[0.98rem] leading-8 text-[#4b4541] md:text-[1.02rem]">
-                This is a curated list of Nashville videographers who are active, reliable, and consistently doing strong work across weddings, brands, events, and creative projects.
-              </p>
-              <p className="mt-7 max-w-[610px] text-[0.94rem] leading-7 text-[#4b4541]">
-                No endless scrolling. No random guessing. Just a cleaner way to find the right fit faster.
+                Or tell me what you need — I’ll point you to the right one.
               </p>
               <div className="mt-10 flex flex-wrap gap-4 lg:mt-11">
                 <a
