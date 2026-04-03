@@ -344,13 +344,21 @@ export default function Home() {
 
       <section id="top" className="mx-auto max-w-6xl px-6 py-12 md:px-10 md:py-16 lg:py-18">
         <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,0.96fr)_300px] lg:gap-10 xl:grid-cols-[minmax(0,1fr)_320px]">
-          <Reveal className="max-w-[700px]" delay={40}>
+          <Reveal className="max-w-[760px]" delay={40}>
             <Parallax speed={0.016}>
               <p className="mb-4 text-sm uppercase tracking-[0.2em] text-[#7a6d66]">Nashville, TN</p>
-              <h1 className="max-w-[8.4ch] text-[3.2rem] font-semibold leading-[0.95] tracking-[-0.04em] md:text-[4.35rem] lg:text-[5.15rem] xl:text-[5.6rem]">
-                Nashville Videographers — Find the Right Videographer in Nashville
+              <h1 className="max-w-[760px] font-semibold tracking-[-0.035em] text-[#1A1A1A]">
+                <span className="block text-[1.25rem] uppercase tracking-[0.16em] text-[#7a6d66] md:text-[1.45rem]">
+                  Nashville Videographers
+                </span>
+                <span className="mt-3 block text-[3.05rem] leading-[0.96] md:text-[4.6rem] lg:text-[5.2rem] xl:text-[5.7rem]">
+                  Find the Right Videographer
+                </span>
+                <span className="mt-3 block text-[2.2rem] leading-[0.98] md:text-[3.25rem] lg:text-[3.8rem] xl:text-[4.1rem]">
+                  in Nashville
+                </span>
               </h1>
-              <p className="mt-7 max-w-[620px] text-[1.02rem] leading-8 text-[#4b4541] md:text-[1.22rem] md:leading-[2.05rem]">
+              <p className="mt-8 max-w-[640px] text-[1.02rem] leading-8 text-[#4b4541] md:text-[1.16rem] md:leading-[1.95rem]">
                 Find and hire a videographer in Nashville for weddings, brands, events, and more — without digging through comments, guessing, or wasting time.
               </p>
               <p className="mt-5 max-w-[610px] text-[0.98rem] leading-8 text-[#4b4541] md:text-[1.02rem]">
@@ -359,7 +367,7 @@ export default function Home() {
               <p className="mt-7 max-w-[610px] text-[0.94rem] leading-7 text-[#4b4541]">
                 No endless scrolling. No random guessing. Just a cleaner way to find the right fit faster.
               </p>
-              <div className="mt-9 flex flex-wrap gap-4 lg:mt-10">
+              <div className="mt-10 flex flex-wrap gap-4 lg:mt-11">
                 <a
                   href="#categories"
                   className="rounded-full px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:brightness-105 hover:shadow-md"
